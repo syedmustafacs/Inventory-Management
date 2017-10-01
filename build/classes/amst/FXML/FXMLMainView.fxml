@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="518.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="amst.FXMLDocumentController">
+   <children>
+      <Pane layoutX="-2.0" layoutY="-1.0" prefHeight="518.0" prefWidth="710.0">
+         <children>
+            <SplitPane dividerPositions="0.29797979797979796" layoutX="3.0" layoutY="25.0" prefHeight="496.0" prefWidth="710.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="516.0" prefWidth="195.0">
+                     <children>
+                        <Accordion layoutX="3.0" layoutY="34.0">
+                          <panes>
+                            <TitledPane animated="false" text="untitled 1">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="untitled 3">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="183.0" />
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="untitled 2">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                          </panes>
+                        </Accordion>
+                        <Label layoutX="11.0" layoutY="5.0" text="Menu Items">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="96.0" layoutY="2.0" prefHeight="0.0" prefWidth="102.0" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="549.0" prefWidth="544.0">
+                     <children>
+                        <Pane layoutX="17.0" layoutY="234.0" prefHeight="200.0" prefWidth="200.0" />
+                        <HBox layoutX="47.0" layoutY="111.0" prefHeight="153.0" prefWidth="373.0" spacing="8.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleProduct" prefHeight="116.0" prefWidth="119.0" text="Products" />
+                              <Button mnemonicParsing="false" prefHeight="115.0" prefWidth="117.0" text="Accounts" />
+                              <Button mnemonicParsing="false" prefHeight="115.0" prefWidth="114.0" text="Add Employees" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="173.0" layoutY="258.0" prefHeight="153.0" prefWidth="230.0" spacing="8.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#generateInvoice" prefHeight="116.0" prefWidth="119.0" text="Generate Invoice" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+            <MenuBar layoutX="2.0" layoutY="-1.0" prefHeight="25.0" prefWidth="710.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

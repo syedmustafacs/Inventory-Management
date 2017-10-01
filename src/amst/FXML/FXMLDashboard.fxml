@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="915.0" style="-fx-background-color: #e5e5ff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="amst.FXMLProductController">
+   <top>
+      <AnchorPane prefHeight="50.0" prefWidth="637.0" style="-fx-background-color: #b2b2ff;" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="46.0" prefWidth="637.0" style="-fx-background-color: #b2b2ff;" BorderPane.alignment="CENTER">
+         <children>
+          <AnchorPane layoutX="200.0" layoutY="-116.0" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+         </children></AnchorPane>
+   </bottom>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Inventory">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <left>
+                        <AnchorPane prefHeight="317.0" prefWidth="241.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <TextField fx:id="updateInventoryId" layoutX="78.0" layoutY="58.0" />
+                              <TextField fx:id="updateInventoryQuantity" layoutX="78.0" layoutY="100.0" />
+                              <Label layoutX="14.0" layoutY="62.0" text="Id" />
+                              <Label layoutX="14.0" layoutY="103.0" text="Quantity" />
+                              <Button layoutX="98.0" layoutY="197.0" mnemonicParsing="false" onAction="#actionOnSave" style="-fx-border-color: red;" text="Update Inventory" />
+                              <TextField fx:id="updateInventoryThreshold" layoutX="78.0" layoutY="145.0" />
+                              <Label layoutX="15.0" layoutY="149.0" prefHeight="17.0" prefWidth="54.0" text="Threshold" />
+                           </children>
+                        </AnchorPane>
+                     </left>
+                     <center>
+                        <TableView fx:id="table1" onMouseClicked="#MouseClick1" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                          <columns>
+                            <TableColumn fx:id="id1" prefWidth="75.0" text="Id" />
+                            <TableColumn fx:id="quantity1" prefWidth="120.0" text="Quantity" />
+                              <TableColumn fx:id="name1" prefWidth="190.0" text="Name" />
+                              <TableColumn fx:id="threshold1" prefWidth="139.0" text="Threshold" />
+                          </columns>
+                        </TableView>
+                     </center>
+                     <top>
+                        <AnchorPane prefHeight="25.0" prefWidth="637.0" style="-fx-background-color: #b2b2ff;" BorderPane.alignment="CENTER" />
+                     </top>
+                  </BorderPane>
+               </content>
+          </Tab>
+          <Tab text="Part Register">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <AnchorPane prefHeight="27.0" prefWidth="637.0" style="-fx-background-color: #9999ff;" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label layoutX="22.0" layoutY="5.0" text="Part Register Form">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </top>
+                     <left>
+                        <AnchorPane prefHeight="258.0" prefWidth="80.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <VBox layoutX="13.0" layoutY="14.0" prefHeight="220.0" prefWidth="137.0">
+                                 <children>
+                                    <AnchorPane prefHeight="11.0" prefWidth="137.0" />
+                                    <Label text="Enter Part Name" />
+                                    <AnchorPane prefHeight="38.0" prefWidth="137.0" />
+                                    <Label text="Enter Meta Data" />
+                                    <AnchorPane prefHeight="32.0" prefWidth="137.0" />
+                                    <Label text="Enter Initial Quantity" />
+                                    <AnchorPane prefHeight="33.0" prefWidth="137.0" />
+                                    <Label text="Threshold Value" />
+                                    <AnchorPane prefHeight="32.0" prefWidth="137.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </left>
+                     <center>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <VBox prefHeight="257.0" prefWidth="183.0">
+                                 <children>
+                                    <AnchorPane prefHeight="8.0" prefWidth="183.0" />
+                                    <AnchorPane prefHeight="14.0" prefWidth="182.0" />
+                                    <TextField fx:id="addPartName" prefHeight="25.0" prefWidth="228.0" promptText="Enter here seperated with _" />
+                                    <AnchorPane prefHeight="16.0" prefWidth="183.0" />
+                                    <AnchorPane prefHeight="14.0" prefWidth="182.0" />
+                                    <TextField fx:id="addPartMetaData" prefHeight="25.0" prefWidth="162.0" promptText="Short Info" />
+                                    <AnchorPane prefHeight="0.0" prefWidth="183.0" />
+                                    <AnchorPane prefHeight="27.0" prefWidth="183.0" />
+                                    <TextField fx:id="addPartQuantity" prefHeight="25.0" prefWidth="164.0" promptText="Must be a integer" />
+                                    <AnchorPane prefHeight="21.0" prefWidth="183.0" />
+                                    <TextField fx:id="addPartThreshold" prefHeight="25.0" prefWidth="164.0" promptText="Must be a integer" />
+                                    <AnchorPane prefHeight="51.0" prefWidth="183.0">
+                                       <children>
+                                          <Button layoutX="46.0" layoutY="16.0" mnemonicParsing="false" onAction="#actionAddPart" prefHeight="30.0" prefWidth="84.0" text="Create" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </center>
+                  </BorderPane>
+               </content>
+          </Tab>
+            <Tab text="Product Register">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text="Client Register">
+               <content>
+                  <BorderPane prefHeight="233.0" prefWidth="556.0">
+                     <top>
+                        <AnchorPane prefHeight="27.0" prefWidth="637.0" style="-fx-background-color: #9999ff;" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label layoutX="46.0" layoutY="8.0" text="Client Registration Form">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="344.0" layoutY="6.0" text="List Of Registered Clients">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                     </top>
+                     <left>
+                        <AnchorPane prefHeight="258.0" prefWidth="347.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <TextField layoutX="180.0" layoutY="71.0" />
+                              <TextField layoutX="180.0" layoutY="110.0" />
+                              <TextField layoutX="180.0" layoutY="144.0" />
+                              <Label layoutX="35.0" layoutY="75.0" text="Company Name" />
+                              <Label layoutX="35.0" layoutY="114.0" text="Debit" />
+                              <Label layoutX="35.0" layoutY="148.0" text="Credit" />
+                              <Button layoutX="215.0" layoutY="183.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="76.0" text="Register" />
+                           </children>
+                        </AnchorPane>
+                     </left>
+                     <center>
+                        <TableView prefHeight="258.0" prefWidth="293.0" BorderPane.alignment="CENTER">
+                          <columns>
+                            <TableColumn minWidth="0.0" prefWidth="127.0" text="C1" />
+                            <TableColumn prefWidth="309.0" text="C2" />
+                          </columns>
+                        </TableView>
+                     </center>
+                  </BorderPane>
+               </content>
+            </Tab>
+            <Tab text="Generate Invoice">
+               <content>
+                  <BorderPane prefHeight="298.0" prefWidth="637.0">
+                     <center>
+                        <TableView fx:id="cart" prefHeight="299.0" prefWidth="610.0" BorderPane.alignment="CENTER">
+                          <columns>
+                            <TableColumn fx:id="cartName" prefWidth="154.0" text="Name" />
+                              <TableColumn fx:id="cartQuantity" minWidth="8.0" prefWidth="59.0" text="Quantity" />
+                              <TableColumn fx:id="cartPrice" minWidth="0.0" prefWidth="94.0" text="Price(/Unit)" />
+                              <TableColumn fx:id="cartGst" prefWidth="84.0" text="GST(%)" />
+                              <TableColumn fx:id="cartCartridge" prefWidth="90.0" text="Cartridge" />
+                              <TableColumn fx:id="cartTotal" prefWidth="128.0" text="Total" />
+                          </columns>
+                        </TableView>
+                     </center>
+                     <left>
+                        <AnchorPane prefHeight="379.0" prefWidth="306.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <TableView fx:id="productTable" layoutY="1.0" onMouseClicked="#actionOnClickForProduct" prefHeight="181.0" prefWidth="306.0">
+                                <columns>
+                                  <TableColumn fx:id="productId" prefWidth="86.0" text="Id" />
+                                  <TableColumn fx:id="productName" prefWidth="219.0" text="Name" />
+                                </columns>
+                              </TableView>
+                              <TextField fx:id="invoiceId" layoutX="109.0" layoutY="188.0" />
+                              <TextField fx:id="invoiceQuantity" layoutX="109.0" layoutY="217.0" />
+                              <TextField fx:id="invoicePrice" layoutX="109.0" layoutY="247.0" />
+                              <Label layoutX="26.0" layoutY="192.0" text="Product Name" />
+                              <Label layoutX="26.0" layoutY="221.0" text="Quantity" />
+                              <Label layoutX="26.0" layoutY="249.0" text="Price" />
+                              <TextField fx:id="invoiceCartridge" layoutX="109.0" layoutY="277.0" />
+                              <TextField fx:id="invoiceGst" layoutX="109.0" layoutY="306.0" />
+                              <Label layoutX="25.0" layoutY="281.0" text="Cartrige" />
+                              <Label layoutX="25.0" layoutY="310.0" text="GST" />
+                              <Button layoutX="164.0" layoutY="368.0" mnemonicParsing="false" onAction="#actionCartAdd" text="Add" />
+                              <Label layoutX="25.0" layoutY="335.0" text="Client" />
+                              <ComboBox fx:id="clientComboBox" layoutX="108.0" layoutY="334.0" prefWidth="150.0" />
+                           </children>
+                        </AnchorPane>
+                     </left>
+                     <top>
+                        <AnchorPane prefHeight="34.0" prefWidth="637.0" style="-fx-background-color: #b2b2ff;" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label layoutX="306.0" layoutY="9.0" text="Shopping Cart">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="9.0" text="Select From Products">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </top>
+                     <bottom>
+                        <AnchorPane prefHeight="54.0" prefWidth="916.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <TextField fx:id="txtFieldSubTotal" layoutX="753.0" layoutY="11.0" />
+                              <Label layoutX="687.0" layoutY="15.0" text="Sub Total" />
+                              <Button layoutX="510.0" layoutY="12.0" mnemonicParsing="false" onAction="#actionGenerateInvoice" text="Generate Invoice" />
+                              <Button layoutX="327.0" layoutY="11.0" mnemonicParsing="false" onAction="#actionCartReset" prefHeight="25.0" prefWidth="61.0" text="Reset" textFill="#d32727" />
+                           </children>
+                        </AnchorPane>
+                     </bottom>
+                  </BorderPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
